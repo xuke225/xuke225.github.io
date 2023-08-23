@@ -99,13 +99,13 @@
 
 <html>
   <head>
-		<title>BiPointNet</title>
+		<title>EQ-Net</title>
   </head>
 
   <body>
     <br>
     <center>
-    <span style="font-size:35px">BiPointNet: Binary Neural Network for Point Clouds</span>
+    <span style="font-size:35px">EQ-Net: Elastic Quantization Neural Networks</span>
 	</center>
 
 	<br>
@@ -114,82 +114,44 @@
   	 <tr>
         <td align=center width=80px>
 		<center>
-		<span style="font-size:18px"><a href="https://htqin.github.io/">Haotong Qin*</a></span>
+		<span style="font-size:18px"><a href="https://xuke225.github.io/">Ke Xu</a></span>
 		<!--<span style="font-size:18px"><a href="https://liming-jiang.com/" target="_blank" >Liming Jiang</a></span>-->
 		</center>
 		</td>
 
 	 	<td align=center width=80px>
 		<center>
-		<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=WrDKqIAAAAAJ&hl=en">Zhongang Cai*</a></span>
+		<span style="font-size:18px">Lei Han</span>
 		</center>
 		</td>
 
 		<td align=center width=80px>
 		<center>
-		<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=2QLD4fAAAAAJ&hl=en">Mingyuan Zhang*</a></span>
+		<span style="font-size:18px">Ye Tian</span>
 		</center>
 		</td>
 
 		<td align=center width=80px>
 		<center>
-		<span style="font-size:18px"><a href="https://github.com/yifu-ding">Yifu Ding</a></span>
+		<span style="font-size:18px">ShangShang Yang</span>
 		</center>
 		</td>
+
+		<td align=center width=80px>
+		<center>
+		<span style="font-size:18px">Xingyi Zhang</span>
+		</center>
+		</td>
+
 	 </tr>
 	</table>
-	
-	</br>
-	
-    <table align=center width=900px>
-      <tr>
-		<td align=center width=80px>
-		<center>
-		<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=oGM5N1kAAAAJ&hl=en">Haiyu Zhao</a></span>
-		</center>
-		</td>
-		
-		<td align=center width=80px>
-		<center>
-		<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=afbbNmwAAAAJ&hl=en">Shuai Yi</a></span>
-		</center>
-		</td>
-		
-		<td align=center width=80px>
-		<center>
-		<span style="font-size:18px"><a href="http://sites.nlsde.buaa.edu.cn/~xlliu/">Xianglong Liu</a></span>
-		</center>
-		</td>
-
-		<td align=center width=80px>
-		<center>
-		<span style="font-size:18px"><a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a></span>
-		</center>
-		</td>
-     </tr>
-	</table>
-
-
-	<br>
 
 	<table align=center width=900px>
   	 <tr>
 		<td align=center width=80px>
 		<center>
-		<span style="font-size:20px">Beihang University</span>
+		<span style="font-size:20px">Anhui University</span>
 		</center>
-		</td>
-
-		<td align=center width=80px>
-		<center>
-		<span style="font-size:20px">SenseTime Research</span>
-		</center>
-		</td>
-
-		<td align=center width=80px>
-			<center>
-			<span style="font-size:20px">UC San Diego</span>
-			</center>
 		</td>
 
 	 </tr>
@@ -201,7 +163,7 @@
   	 <tr>
 		<td align=center width=80px>
 		<center>
-			<span>Accepted in ICLR 2021</span>
+			<span>Accepted in ICCV 2023</span>
 		</center>
 		</td>
 
@@ -213,7 +175,7 @@
   			  <tr>
   	              <td width=900px>
   					<center>
-  	                	<a href="../Imgs/ICLR/overview_v1.png"><img src = "../Imgs/ICLR/overview_v1.png" width="950px"></img></href></a><br>
+  	                	<a href="../Imgs/EQNet/arch.png"><img src = "../Imgs/EQNet/arch.png" width="950px"></img></href></a><br>
 					</center>
   	              </td>
   	          </tr>
@@ -221,21 +183,16 @@
 
 		<br>
 		<p style="text-align:justify">
-			To alleviate the resource constraint for real-time point cloud applications that 
-			run on edge devices, in this paper we present BiPointNet, the first model binarization 
-			approach for efficient deep learning on point clouds. We first discover that the 
-			immense performance drop of binarized models for point clouds mainly stems from 
-			two challenges: aggregation-induced feature homogenization that leads to a 
-			degradation of information entropy, and scale distortion that hinders optimization 
-			and invalidates scale-sensitive structures. With theoretical justifications and 
-			in-depth analysis, our BiPointNet introduces Entropy-Maximizing Aggregation (EMA) 
-			to modulate the distribution before aggregation for the maximum information entropy, 
-			and Layer-wise Scale Recovery (LSR) to efficiently restore feature representation capacity. 
-			Extensive experiments show that BiPointNet outperforms existing binarization methods by 
-			convincing margins, at the level even comparable with the full precision counterpart. 
-			We highlight that our techniques are generic, guaranteeing significant improvements on 
-			various fundamental tasks and mainstream backbones, e.g., BiPointNet gives an 
-			impressive 14.7× speedup and 18.9× storage saving on real-world resource-constrained devices.
+			Current model quantization methods have shown their promising capability in reducing storage space and computation complexity. 
+			However, due to the diversity of quantization forms supported by different hardware, 
+			one limitation of existing solutions is that usually require repeated optimization for different scenarios. 
+			How to construct a model with flexible quantization forms has been less studied. 
+			In this paper, we explore a one-shot network quantization regime, named Elastic Quantization Neural Networks (EQ-Net), which 
+			aims to train a robust weight-sharing quantization supernet. First of all, we propose an elastic quantization space (including elastic bit-width, granularity, and symmetry) 
+			to adapt to various mainstream quantitative forms. Secondly, we propose the Weight Distribution Regularization Loss (WDR-Loss) and Group Progressive Guidance Loss (GPG-Loss) 
+			to bridge the inconsistency of the distribution for weights and output logits in the elastic quantization space gap. Lastly, we incorporate genetic algorithms and the proposed 
+			Conditional Quantization-Aware Accuracy Predictor (CQAP) as an estimator to quickly search mixed-precision quantized neural networks in supernet. 
+			Extensive experiments demonstrate that our EQ-Net is close to or even better than its static counterparts as well as state-of-the-art robust bit-width methods. 
 		</p>
 		
 		<br><br>
@@ -251,13 +208,13 @@
 				
 				<td width="150">
 				<center>
-					<a href="https://openreview.net/forum?id=9QLRCVysdlO" class="imageLink"><img src="../Imgs/ICLR/openreview.png" width="130"></a><br>
+					<a href="https://arxiv.org/abs/2308.07650" class="imageLink"><img src="../Imgs/EQNet/arxiv.png" width="130"></a><br>
 				</center>
 				</td>
 				
 				<td width="150">
 					<center>
-						<a href="https://github.com/htqin/BiPointNet" class="imageLink"><img src="../Imgs/ICLR/github.png" width="130"></a><br>
+						<a href="https://github.com/xuke225/EQ-Net" class="imageLink"><img src="../Imgs/EQNet/github.png" width="130"></a><br>
 					</center>
 				</td>
 				
@@ -270,12 +227,12 @@
 				</td>
 				<td><center>
 					<br>
-					<a href="https://openreview.net/forum?id=9QLRCVysdlO">[Paper]</a> &nbsp
+					<a href="https://arxiv.org/abs/2308.07650">[Paper]</a> &nbsp
 				  	<!-- <a href="./files/bibtex.txt">[BibTex]</a> -->
 				</center></td>
 				<td><center>
 					<br>
-					<a href="https://github.com/htqin/BiPointNet">[Code]</a>
+					<a href="https://github.com/xuke225/EQ-Net">[Code]</a>
 				</center></td>
 				
 				<td width="100">
@@ -291,36 +248,17 @@
 			<table align=center width=1100px>
 				<tr>
   	            <td>
-				<center><h1>Baselines</h1></center>
+				<center><h1>Results</h1></center>
 			  
 				<table align=center width=960px>
 					<tr>
 						<td width=800px>
 						  <center>
-							  <a href="../Imgs/ICLR/results.png"><img src = "../Imgs/ICLR/results.png" width="750px"></img></href></a><br>
+							  <a href="../Imgs/EQNet/result.png"><img src = "../Imgs/EQNet/result.png" width="750px"></img></href></a><br>
 						</center>
 						</td>
 					</tr>
 			  </table>
-
-		<br><br>
-		<hr>
-
-
-		<table align=center width=1100px>
-			<tr>
-			  <td>
-			<center><h1>Deployment Efficiency on ARM Devices</h1></center>
-		  
-			<table align=center width=960px>
-				<tr>
-					<td width=900px>
-					  <center>
-						  <a href="../Imgs/ICLR/efficiency.png"><img src = "../Imgs/ICLR/efficiency.png" width="900px"></img></href></a><br>
-					</center>
-					</td>
-				</tr>
-		  </table>
 
 	<br><br>
 	<hr>
@@ -330,9 +268,8 @@
   	              <td>
 	  		  <center><h1>Acknowledgements</h1></center>
 			  <center>
-				This work was supported by National Natural Science Foundation of China (62022009, 61872021), 
-				Beijing Nova Program of Science and Technology (Z191100001119050), and State Key Lab of Software 
-				Development Environment (SKLSDE-2020ZX-06).
+				This work was supported in part by the National Natural Science Foundation of China (No. 62206003, No. 62276001, No. 62136008, No. U20A20306, No. U21A20512) 
+				and in part by the Excellent Youth Foundation of Anhui Provincial Colleges (No. 2022AH030013).
 			  </center>
 		</td>
 		</tr>
