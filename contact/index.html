@@ -1,0 +1,30 @@
+---
+nav_key: contact
+title_en: Contact
+title_zh: 联系方式
+description_en: "Contact Ke Xu at the School of Artificial Intelligence, Anhui University."
+description_zh: "联系安徽大学人工智能学院许柯。"
+---
+
+<header class="compact-page-header">
+  <h1><span data-lang="en">{{ site.data.ui.contact.title.en }}</span><span data-lang="zh">{{ site.data.ui.contact.title.zh }}</span></h1>
+</header>
+
+<section class="contact-grid" aria-label="Contact details">
+  <article class="contact-card contact-card--primary">
+    <p class="contact-label"><span data-lang="en">{{ site.data.ui.contact.email.en }}</span><span data-lang="zh">{{ site.data.ui.contact.email.zh }}</span></p>
+    <a class="contact-value contact-email" href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>
+  </article>
+  <article class="contact-card">
+    <p class="contact-label"><span data-lang="en">{{ site.data.ui.contact.affiliation.en }}</span><span data-lang="zh">{{ site.data.ui.contact.affiliation.zh }}</span></p>
+    <p class="contact-value"><span data-lang="en">{{ site.data.profile.affiliation.en }}</span><span data-lang="zh">{{ site.data.profile.affiliation.zh }}</span></p>
+  </article>
+  <article class="contact-card">
+    <p class="contact-label"><span data-lang="en">{{ site.data.ui.contact.address.en }}</span><span data-lang="zh">{{ site.data.ui.contact.address.zh }}</span></p>
+    <p class="contact-value"><span data-lang="en">{{ site.data.profile.address.en }}</span><span data-lang="zh">{{ site.data.profile.address.zh }}</span></p>
+  </article>
+  <article class="contact-card">
+    <p class="contact-label"><span data-lang="en">{{ site.data.ui.contact.profiles.en }}</span><span data-lang="zh">{{ site.data.ui.contact.profiles.zh }}</span></p>
+    <div class="contact-profiles">{% for link in site.data.profile.links %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} <span aria-hidden="true">↗</span></a>{% endfor %}</div>
+  </article>
+</section>

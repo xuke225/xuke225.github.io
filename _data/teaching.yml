@@ -1,0 +1,40 @@
+course_groups:
+  - id: undergraduate
+    title:
+      en: Undergraduate Courses
+      zh: 本科生课程
+    courses:
+      - title:
+          en: Discrete Mathematics
+          zh: 离散数学
+      - title:
+          en: Machine Learning
+          zh: 机器学习
+      - title:
+          en: Machine Learning Laboratory
+          zh: 机器学习实验
+
+  - id: graduate
+    title:
+      en: Graduate Courses
+      zh: 研究生课程
+    courses:
+      - title:
+          en: Deep Learning Algorithms and Applications
+          zh: 深度学习算法及应用
+      - title:
+          en: Advanced Artificial Intelligence
+          zh: 高级人工智能
+
+project:
+  title: VizML
+  section_title:
+    en: Teaching Project
+    zh: 教学项目
+  description:
+    en: "An interactive visualization platform for machine learning teaching and demonstrations. Students can adjust parameters and directly observe decision boundaries, training processes, clustering results, regression curves, and dimensionality-reduction effects."
+    zh: "面向机器学习教学与交互演示的可视化平台。学生可以调整参数，直观观察常见算法的决策边界、训练过程、聚类结果、回归曲线与降维效果。"
+  url: https://github.com/xuke225/VizML
+  link_label:
+    en: View project on GitHub
+    zh: 在 GitHub 上查看项目

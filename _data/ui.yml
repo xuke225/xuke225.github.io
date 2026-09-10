@@ -1,0 +1,96 @@
+skip:
+  en: Skip to content
+  zh: 跳至正文
+language:
+  en: 中文
+  zh: EN
+menu:
+  en: Menu
+  zh: 菜单
+follow:
+  en: Academic profiles
+  zh: 学术主页
+home:
+  about:
+    en: About
+    zh: 个人简介
+  research:
+    en: Research
+    zh: 研究方向
+  news:
+    en: Recent News
+    zh: 最新动态
+  news_intro:
+    en: Research milestones, publications, and academic updates.
+    zh: 研究进展、论文发表与学术动态。
+  expand_all:
+    en: View all news
+    zh: 查看全部动态
+  collapse_all:
+    en: Show less
+    zh: 收起
+publications:
+  title:
+    en: Publications
+    zh: 论文发表
+  selected:
+    en: Selected Publications
+    zh: 代表性成果
+  other:
+    en: Other Publications
+    zh: 其他成果
+  selected_badge:
+    en: Selected
+    zh: 代表作
+  links:
+    paper:
+      en: Paper
+      zh: 论文
+    pdf:
+      en: PDF
+      zh: PDF
+    code:
+      en: Code
+      zh: 代码
+    project:
+      en: Project
+      zh: 项目主页
+    journal:
+      en: Journal
+      zh: 期刊版本
+    supplement:
+      en: Supplement
+      zh: 补充材料
+teaching:
+  title:
+    en: Teaching
+    zh: 教学
+  empty_title:
+    en: Course information
+    zh: 课程信息
+  empty_body:
+    en: "Public course information and materials will be listed here as they become available. For course or supervision enquiries, please contact me by email."
+    zh: "可公开的课程信息与教学资料将在此持续更新。如需咨询课程或学生指导事宜，请通过邮件联系。"
+  email_cta:
+    en: Send an email
+    zh: 发送邮件
+contact:
+  title:
+    en: Contact
+    zh: 联系方式
+  email:
+    en: Email
+    zh: 邮箱
+  affiliation:
+    en: Affiliation
+    zh: 工作单位
+  address:
+    en: Address
+    zh: 地址
+  profiles:
+    en: Academic profiles
+    zh: 学术主页
+footer:
+  rights:
+    en: All rights reserved.
+    zh: 保留所有权利。

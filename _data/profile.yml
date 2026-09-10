@@ -1,0 +1,46 @@
+name:
+  en: Ke Xu
+  zh: 许柯
+role:
+  en: Associate Professor
+  zh: 副教授
+affiliation:
+  en: School of Artificial Intelligence, Anhui University
+  zh: 安徽大学人工智能学院
+location:
+  en: Hefei, China
+  zh: 中国 · 合肥
+photo: /Imgs/photo.jpg
+email: xuke@ahu.edu.cn
+links:
+  - key: scholar
+    label: Google Scholar
+    url: https://scholar.google.com/citations?user=FEjf5HgAAAAJ
+  - key: github
+    label: GitHub
+    url: https://github.com/xuke225
+
+bio:
+  en:
+    - "I am an Associate Professor and Ph.D./Master's supervisor with the School of Artificial Intelligence at Anhui University, and a member of the Anhui Association for Artificial Intelligence. I received my bachelor's degree from Hefei University of Technology in 2016 and my Ph.D. from Beijing Jiaotong University in 2021. I joined Anhui University in the same year."
+    - "My research focuses on generative foundation model optimization, computer vision, neural network compression, and embedded AI systems and deployment, with an emphasis on hardware-software co-design for efficient deep learning under resource constraints."
+  zh:
+    - "我现为安徽大学人工智能学院副教授、博士生/硕士生导师，安徽省人工智能学会会员。2016 年于合肥工业大学获得学士学位，2021 年于北京交通大学获得博士学位，同年加入安徽大学人工智能学院。"
+    - "我的研究聚焦生成式大模型优化、计算机视觉、神经网络模型压缩，以及嵌入式 AI 系统与部署，重点关注资源受限场景下深度学习模型从算法设计、优化到高效部署的软硬件协同方法。"
+
+research_intro:
+  en: "I study efficient and deployable artificial intelligence across model optimization, visual perception, compression, and hardware-aware deployment."
+  zh: "我围绕模型优化、视觉感知、模型压缩和硬件感知部署，研究高效且可落地的人工智能方法。"
+research_topics:
+  - en: Generative foundation model optimization — GPT compression and deployment
+    zh: 生成式大模型优化——GPT 模型压缩与部署
+  - en: Computer vision — visual perception for autonomous driving and industrial anomaly detection
+    zh: 计算机视觉——自动驾驶视觉感知、工业异常检测等
+  - en: Neural network compression — quantization, pruning, distillation, and neural architecture search
+    zh: 神经网络模型压缩——量化、剪枝、蒸馏与神经网络架构搜索
+  - en: Embedded AI systems and deployment — deep learning deployment on GPU, CPU, ASIC, and NPU platforms
+    zh: 嵌入式 AI 系统与部署——GPU、CPU、ASIC、NPU 深度学习算法部署
+
+address:
+  en: "No. 111 Jiulong Road, Hefei, Anhui 230601, China"
+  zh: "中国安徽省合肥市九龙路 111 号，230601"

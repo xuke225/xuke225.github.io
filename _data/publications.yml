@@ -1,0 +1,257 @@
+- id: epts
+  year: 2026
+  selected: false
+  title: "EPTS: Elastic Post-Training Sparsity for Efficient Large Language Model Compression"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Jiaqi Wan" }
+    - { name: "Wenhao Hu" }
+    - { name: "Han Pu" }
+    - { name: "Xiaoyun Wang" }
+  venue: { name: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining", abbr: "KDD" }
+  links:
+    paper: https://arxiv.org/abs/2606.25285
+    code: https://github.com/xuke225/EPTS
+
+- id: cogeo-ad
+  year: 2026
+  selected: false
+  title: "CoGeoAD: Hierarchical Color-Geometric Fusion with Multi-View Attention for Zero-Shot 3D Anomaly Detection"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Xinle Wang" }
+    - { name: "Yanning Hou" }
+    - { name: "Xueliang Ma" }
+    - { name: "Juan Xie" }
+    - { name: "Jianfeng Qiu" }
+  venue: { name: "International Conference on Machine Learning", abbr: "ICML" }
+  links:
+    paper: https://arxiv.org/abs/2606.25273
+    code: https://github.com/kingdomShu/CoGeoAD
+
+- id: visual-ad
+  year: 2026
+  selected: false
+  title: "VisualAD: Language-Free Zero-Shot Anomaly Detection via Vision Transformer"
+  authors:
+    - { name: "Yanning Hou" }
+    - { name: "Peiyuan Li" }
+    - { name: "Zirui Liu" }
+    - { name: "Yitong Wang" }
+    - { name: "Yanran Ruan" }
+    - { name: "Jianfeng Qiu" }
+    - { name: "Ke Xu", self: true, corresponding: true }
+  venue: { name: "IEEE/CVF Conference on Computer Vision and Pattern Recognition", abbr: "CVPR" }
+  links:
+    paper: https://arxiv.org/abs/2603.07952
+    code: https://github.com/7HHHHH/VisualAD
+
+- id: quept
+  year: 2026
+  selected: false
+  title: "QuEPT: Quantized Elastic Precision Transformers with One-Shot Calibration for Multi-Bit Switching"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Yixin Wang" }
+    - { name: "Zhongcheng Li" }
+    - { name: "Hao Cui" }
+    - { name: "Jinshui Hu" }
+    - { name: "Xingyi Zhang" }
+  venue: { name: "AAAI Conference on Artificial Intelligence", abbr: "AAAI" }
+  links:
+    paper: https://arxiv.org/abs/2602.12609
+    code: https://github.com/xuke225/QuEPT
+
+- id: deft-lora
+  year: 2026
+  selected: false
+  title: "DeFT-LoRA: Decoupled and Fused Tuning with LoRA Experts for Universal Cross-Domain Retrieval"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Xiaozheng Shen" }
+    - { name: "Shanshan Wang", corresponding: true }
+    - { name: "Mengzhu Wang" }
+    - { name: "Xun Yang" }
+  venue: { name: "AAAI Conference on Artificial Intelligence", abbr: "AAAI" }
+  links:
+    paper: https://doi.org/10.1609/AAAI.V40I13.38110
+
+- id: autompq
+  year: 2024
+  selected: false
+  title: "AutoMPQ: Automatic Mixed-Precision Neural Network Search via Few-Shot Quantization Adapter"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Xiangyang Shao" }
+    - { name: "Ye Tian", corresponding: true }
+    - { name: "Shangshang Yang" }
+    - { name: "Xingyi Zhang" }
+  venue: { name: "IEEE Transactions on Emerging Topics in Computational Intelligence", abbr: "TETCI" }
+  links:
+    paper: https://doi.org/10.1109/TETCI.2024.3394679
+
+- id: ptmq
+  year: 2024
+  selected: true
+  title: "PTMQ: Post-Training Multi-Bit Quantization of Neural Networks"
+  image: /Imgs/PTMQ.jpg
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Zhongcheng Li" }
+    - { name: "Shanshan Wang", corresponding: true }
+    - { name: "Xingyi Zhang", corresponding: true }
+  venue: { name: "AAAI Conference on Artificial Intelligence", abbr: "AAAI" }
+  links:
+    paper: https://ojs.aaai.org/index.php/AAAI/article/view/29553
+    pdf: https://ojs.aaai.org/index.php/AAAI/article/download/29553/30925
+    code: https://github.com/xuke225/PTMQ
+
+- id: eq-net
+  year: 2023
+  selected: true
+  title: "EQ-Net: Elastic Quantization Neural Networks"
+  image: /Imgs/EQNet.png
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Lei Han" }
+    - { name: "Ye Tian" }
+    - { name: "Shangshang Yang" }
+    - { name: "Xingyi Zhang" }
+  venue: { name: "IEEE/CVF International Conference on Computer Vision", abbr: "ICCV" }
+  links:
+    paper: https://arxiv.org/abs/2308.07650
+    project: /Projects/EQNet.html
+    code: https://github.com/xuke225/EQ-Net
+
+- id: ta-bidet
+  year: 2022
+  selected: false
+  title: "TA-BiDet: Task-Aligned Binary Object Detector"
+  authors:
+    - { name: "Han Pu" }
+    - { name: "Ke Xu", self: true }
+    - { name: "Dezheng Zhang" }
+    - { name: "Li Liu" }
+    - { name: "Lingzhi Liu" }
+    - { name: "Dong Wang" }
+  venue: { name: "Neurocomputing", abbr: "Neurocomputing" }
+  links:
+    paper: https://doi.org/10.1016/j.neucom.2022.09.038
+
+- id: multiquant
+  year: 2022
+  selected: true
+  title: "MultiQuant: Training Once for Multi-Bit Quantization of Neural Networks"
+  image: /Imgs/MultiQuant.png
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Qiantai Feng" }
+    - { name: "Xingyi Zhang" }
+    - { name: "Dong Wang", corresponding: true }
+  venue: { name: "International Joint Conference on Artificial Intelligence", abbr: "IJCAI" }
+  links:
+    paper: https://www.ijcai.org/proceedings/2022/504
+    pdf: https://www.ijcai.org/proceedings/2022/0504.pdf
+
+- id: genexp
+  year: 2021
+  selected: false
+  title: "GenExp: Multi-Objective Pruning for Deep Neural Network Based on Genetic Algorithm"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Dezheng Zhang" }
+    - { name: "Jianjing An" }
+    - { name: "Li Liu" }
+    - { name: "Lingzhi Liu" }
+    - { name: "Dong Wang" }
+  venue: { name: "Neurocomputing", abbr: "Neurocomputing" }
+  links:
+    paper: https://doi.org/10.1016/j.neucom.2021.04.022
+
+- id: dedicated-yolov2
+  year: 2021
+  selected: false
+  title: "A Dedicated Hardware Accelerator for Real-Time Acceleration of YOLOv2"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Xiaoyun Wang" }
+    - { name: "Xinyang Liu" }
+    - { name: "Changfeng Cao" }
+    - { name: "Huolin Li" }
+    - { name: "Haiyong Peng" }
+    - { name: "Dong Wang" }
+  venue: { name: "Journal of Real-Time Image Processing", abbr: "JRTIP" }
+  links:
+    journal: https://doi.org/10.1007/s11554-020-00977-w
+
+- id: dsp-efficient
+  year: 2020
+  selected: true
+  title: "DSP-Efficient Hardware Acceleration of Convolutional Neural Network Inference on FPGAs"
+  image: /Imgs/DSP-Efficient.png
+  authors:
+    - { name: "Dong Wang" }
+    - { name: "Ke Xu", self: true }
+    - { name: "Jingning Guo" }
+    - { name: "Soheil Ghiasi" }
+  venue: { name: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems", abbr: "TCAD" }
+  links:
+    paper: https://ieeexplore.ieee.org/document/8963678/
+
+- id: sparse-yolo
+  year: 2020
+  selected: false
+  title: "Sparse-YOLO: Hardware/Software Co-Design of an FPGA Accelerator for YOLOv2"
+  authors:
+    - { name: "Zixiao Wang" }
+    - { name: "Ke Xu", self: true }
+    - { name: "Shuaixiao Wu" }
+    - { name: "Li Liu" }
+    - { name: "Lingzhi Liu" }
+    - { name: "Dong Wang" }
+  venue: { name: "IEEE Access", abbr: "IEEE Access" }
+  links:
+    paper: https://doi.org/10.1109/ACCESS.2020.3004198
+
+- id: abm-spconv
+  year: 2019
+  selected: true
+  title: "ABM-SpConv: A Novel Approach to FPGA-Based Acceleration of Convolutional Neural Network Inference"
+  image: /Imgs/ABM-Sparse.png
+  authors:
+    - { name: "Dong Wang" }
+    - { name: "Ke Xu", self: true }
+    - { name: "Qun Jia" }
+    - { name: "Soheil Ghiasi" }
+  venue: { name: "Design Automation Conference", abbr: "DAC" }
+  links:
+    paper: https://ieeexplore.ieee.org/document/8806824
+
+- id: scalable-yolov2
+  year: 2019
+  selected: true
+  title: "A Scalable OpenCL-Based FPGA Accelerator for YOLOv2"
+  image: /Imgs/PipeCNN_YOLOv2.png
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Xiaoyun Wang" }
+    - { name: "Dong Wang", corresponding: true }
+  venue: { name: "IEEE International Symposium on Field-Programmable Custom Computing Machines", abbr: "FCCM" }
+  links:
+    paper: https://ieeexplore.ieee.org/abstract/document/8735517/
+    journal: https://doi.org/10.1007/s11554-020-00977-w
+    code: https://github.com/doonny/PipeCNN
+
+- id: pipecnn
+  year: 2017
+  selected: true
+  title: "PipeCNN: An OpenCL-Based Open-Source FPGA Accelerator for Convolution Neural Networks"
+  image: /Imgs/PipeCNN.png
+  authors:
+    - { name: "Dong Wang" }
+    - { name: "Ke Xu", self: true, corresponding: true }
+    - { name: "Diankun Jiang" }
+  venue: { name: "International Conference on Field-Programmable Technology", abbr: "ICFPT" }
+  links:
+    paper: https://arxiv.org/abs/1611.02450
+    code: https://github.com/doonny/PipeCNN

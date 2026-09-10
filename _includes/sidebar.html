@@ -1,0 +1,39 @@
+<aside class="profile-sidebar" aria-label="Profile">
+  <div class="profile-card">
+    <div class="portrait-wrap">
+      <img class="portrait" src="{{ site.data.profile.photo | relative_url }}" alt="{{ site.data.profile.name.en }} ({{ site.data.profile.name.zh }})" width="360" height="360">
+      <span class="portrait-accent" aria-hidden="true"></span>
+    </div>
+
+    <div class="profile-identity">
+      <p class="profile-kicker">{{ site.data.profile.name.en }}</p>
+      <h2>{{ site.data.profile.name.zh }}</h2>
+      <p class="profile-role">
+        <span data-lang="en">{{ site.data.profile.role.en }}</span>
+        <span data-lang="zh">{{ site.data.profile.role.zh }}</span>
+      </p>
+    </div>
+
+    <div class="profile-meta">
+      <p>
+        <span class="meta-rule" aria-hidden="true"></span>
+        <span data-lang="en">{{ site.data.profile.affiliation.en }}</span>
+        <span data-lang="zh">{{ site.data.profile.affiliation.zh }}</span>
+      </p>
+      <p class="profile-location">
+        <span data-lang="en">{{ site.data.profile.location.en }}</span>
+        <span data-lang="zh">{{ site.data.profile.location.zh }}</span>
+      </p>
+    </div>
+
+    <a class="email-link" href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>
+
+    <div class="profile-links" aria-label="Academic profiles">
+      {% for link in site.data.profile.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+          <span>{{ link.label }}</span><span aria-hidden="true">↗</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</aside>

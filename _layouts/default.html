@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <title>{{ page.title_en }} · {{ site.data.profile.name.en }}</title>
+    <meta id="page-description" name="description" content="{{ page.description_en | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ke Xu",
+        "alternateName": "许柯",
+        "jobTitle": "Associate Professor",
+        "affiliation": {"@type": "CollegeOrUniversity", "name": "Anhui University"},
+        "email": "mailto:xuke@ahu.edu.cn",
+        "url": "{{ site.url }}",
+        "sameAs": ["https://github.com/xuke225", "https://scholar.google.com/citations?user=FEjf5HgAAAAJ"]
+      }
+    </script>
+  </head>
+  <body data-title-en="{{ page.title_en | escape }} · {{ site.data.profile.name.en }}" data-title-zh="{{ page.title_zh | escape }} · {{ site.data.profile.name.zh }}" data-description-en="{{ page.description_en | escape }}" data-description-zh="{{ page.description_zh | escape }}">
+    <a class="skip-link" href="#main-content">
+      <span data-lang="en">{{ site.data.ui.skip.en }}</span>
+      <span data-lang="zh">{{ site.data.ui.skip.zh }}</span>
+    </a>
+
+    {% include header.html %}
+
+    <div class="site-shell">
+      {% include sidebar.html %}
+      <main id="main-content" class="page-content" tabindex="-1">
+        {{ content }}
+        {% include footer.html %}
+      </main>
+    </div>
+
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  </body>
+</html>

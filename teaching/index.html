@@ -1,0 +1,48 @@
+---
+nav_key: teaching
+title_en: Teaching
+title_zh: 教学
+description_en: "Undergraduate and graduate courses taught by Ke Xu at Anhui University, together with the VizML interactive machine learning teaching project."
+description_zh: "许柯在安徽大学讲授的本科生与研究生课程，以及机器学习交互式教学项目 VizML。"
+---
+
+<header class="compact-page-header">
+  <h1><span data-lang="en">{{ site.data.ui.teaching.title.en }}</span><span data-lang="zh">{{ site.data.ui.teaching.title.zh }}</span></h1>
+</header>
+
+<div class="teaching-content">
+  {% for group in site.data.teaching.course_groups %}
+    <section class="teaching-group" aria-labelledby="{{ group.id }}-courses-title">
+      <p class="note-index" aria-hidden="true">0{{ forloop.index }}</p>
+      <div>
+        <h2 id="{{ group.id }}-courses-title"><span data-lang="en">{{ group.title.en }}</span><span data-lang="zh">{{ group.title.zh }}</span></h2>
+        <ol class="teaching-course-list">
+          {% for course in group.courses %}
+            <li class="course-card">
+              <span class="course-number" aria-hidden="true">0{{ forloop.index }}</span>
+              <span class="course-title"><span data-lang="en">{{ course.title.en }}</span><span data-lang="zh">{{ course.title.zh }}</span></span>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+  {% endfor %}
+
+  {% assign project = site.data.teaching.project %}
+  <section class="teaching-group teaching-project" aria-labelledby="teaching-project-title">
+    <p class="note-index" aria-hidden="true">03</p>
+    <div>
+      <h2 id="teaching-project-title"><span data-lang="en">{{ project.section_title.en }}</span><span data-lang="zh">{{ project.section_title.zh }}</span></h2>
+      <article class="teaching-project-card">
+        <div>
+          <h3>{{ project.title }}</h3>
+          <p><span data-lang="en">{{ project.description.en }}</span><span data-lang="zh">{{ project.description.zh }}</span></p>
+        </div>
+        <a class="primary-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+          <span data-lang="en">{{ project.link_label.en }}</span><span data-lang="zh">{{ project.link_label.zh }}</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </article>
+    </div>
+  </section>
+</div>

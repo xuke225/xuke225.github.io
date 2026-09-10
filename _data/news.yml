@@ -1,0 +1,81 @@
+- date: 2026-06-24
+  featured: true
+  title:
+    en: EPTS was accepted by KDD 2026.
+    zh: EPTS 被 KDD 2026 接收。
+  detail:
+    en: "Elastic Post-Training Sparsity enables one-shot optimization for deployment at multiple sparsity levels."
+    zh: "Elastic Post-Training Sparsity 面向多稀疏率部署，实现一次优化、多配置使用。"
+  links:
+    paper: https://arxiv.org/abs/2606.25285
+    code: https://github.com/xuke225/EPTS
+
+- date: 2026-06-24
+  featured: true
+  title:
+    en: CoGeoAD was accepted by ICML 2026.
+    zh: CoGeoAD 被 ICML 2026 接收。
+  detail:
+    en: "A color-geometric fusion framework for zero-shot 3D anomaly detection."
+    zh: "面向零样本三维异常检测的颜色—几何融合框架。"
+  links:
+    paper: https://arxiv.org/abs/2606.25273
+    code: https://github.com/kingdomShu/CoGeoAD
+
+- date: 2026-03-09
+  featured: true
+  title:
+    en: VisualAD was accepted by CVPR 2026.
+    zh: VisualAD 被 CVPR 2026 接收。
+  detail:
+    en: "A language-free zero-shot anomaly detection framework based on Vision Transformers."
+    zh: "基于视觉 Transformer 的无语言零样本异常检测框架。"
+  links:
+    paper: https://arxiv.org/abs/2603.07952
+    code: https://github.com/7HHHHH/VisualAD
+
+- date: 2026-02-13
+  featured: false
+  title:
+    en: QuEPT was accepted by AAAI 2026.
+    zh: QuEPT 被 AAAI 2026 接收。
+  detail:
+    en: "Quantized Elastic Precision Transformers with one-shot calibration for multi-bit switching."
+    zh: "面向多比特切换、采用一次校准的弹性精度 Transformer 量化方法。"
+  links:
+    paper: https://arxiv.org/abs/2602.12609
+
+- date: 2024-03-24
+  featured: false
+  title:
+    en: PTMQ was accepted by AAAI 2024.
+    zh: PTMQ 被 AAAI 2024 接收。
+  detail:
+    en: "Post-Training Multi-Bit Quantization of Neural Networks."
+    zh: "面向神经网络的训练后多比特量化方法。"
+  links:
+    paper: https://ojs.aaai.org/index.php/AAAI/article/view/29553
+    code: https://github.com/xuke225/PTMQ
+
+- date: 2023-07-01
+  featured: false
+  title:
+    en: EQ-Net was accepted by ICCV 2023.
+    zh: EQ-Net 被 ICCV 2023 接收。
+  detail:
+    en: "Elastic Quantization Neural Networks for flexible, mixed-precision deployment."
+    zh: "面向灵活混合精度部署的弹性量化神经网络。"
+  links:
+    paper: https://arxiv.org/abs/2308.07650
+    code: https://github.com/xuke225/EQ-Net
+
+- date: 2022-04-01
+  featured: false
+  title:
+    en: MultiQuant was accepted by IJCAI 2022.
+    zh: MultiQuant 被 IJCAI 2022 接收。
+  detail:
+    en: "Training once for multi-bit quantization of neural networks."
+    zh: "一次训练即可支持多比特神经网络量化。"
+  links:
+    paper: https://www.ijcai.org/proceedings/2022/504

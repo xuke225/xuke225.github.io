@@ -1,0 +1,34 @@
+{% assign item = include.item %}
+<article class="news-item{% if item.featured %} is-featured{% endif %}{% if include.extra %} news-extra{% endif %}">
+  <button class="news-summary" type="button" aria-expanded="false" aria-controls="news-{{ include.index }}">
+    <time datetime="{{ item.date | date: '%Y-%m-%d' }}">
+      <span data-lang="en">{{ item.date | date: '%b %d, %Y' }}</span>
+      <span data-lang="zh">{{ item.date | date: '%Y 年 %m 月 %d 日' }}</span>
+    </time>
+    <span class="news-title">
+      <span data-lang="en">{{ item.title.en }}</span>
+      <span data-lang="zh">{{ item.title.zh }}</span>
+    </span>
+    <span class="news-chevron" aria-hidden="true"></span>
+  </button>
+  <div class="news-detail" id="news-{{ include.index }}" hidden>
+    <p>
+      <span data-lang="en">{{ item.detail.en }}</span>
+      <span data-lang="zh">{{ item.detail.zh }}</span>
+    </p>
+    {% if item.links %}
+      <div class="news-links">
+        {% for link in item.links %}
+          {% assign link_key = link[0] %}
+          {% assign link_url = link[1] %}
+          {% assign link_label = site.data.ui.publications.links[link_key] %}
+          <a href="{{ link_url }}" target="_blank" rel="noopener noreferrer">
+            <span data-lang="en">{{ link_label.en }}</span>
+            <span data-lang="zh">{{ link_label.zh }}</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>

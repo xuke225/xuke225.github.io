@@ -1,0 +1,38 @@
+---
+nav_key: publications
+title_en: Publications
+title_zh: 论文发表
+description_en: "Selected and recent publications by Ke Xu in efficient deep learning, model compression, computer vision, and AI systems."
+description_zh: "许柯在高效深度学习、模型压缩、计算机视觉与人工智能系统方向的代表性及近期论文。"
+---
+
+<header class="compact-page-header">
+  <h1><span data-lang="en">{{ site.data.ui.publications.title.en }}</span><span data-lang="zh">{{ site.data.ui.publications.title.zh }}</span></h1>
+  <a class="compact-header-link" href="https://scholar.google.com/citations?user=FEjf5HgAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+</header>
+
+<section class="publication-section" aria-labelledby="selected-title">
+  <div class="section-heading publication-heading">
+    <p class="section-index">01</p>
+    <h2 id="selected-title"><span data-lang="en">{{ site.data.ui.publications.selected.en }}</span><span data-lang="zh">{{ site.data.ui.publications.selected.zh }}</span></h2>
+  </div>
+  <div class="publication-list publication-list--selected">
+    {% assign selected_publications = site.data.publications | where: 'selected', true %}
+    {% for publication in selected_publications %}{% include publication-card.html publication=publication %}{% endfor %}
+  </div>
+</section>
+
+<section class="publication-section" aria-labelledby="other-title">
+  <div class="section-heading publication-heading">
+    <p class="section-index">02</p>
+    <h2 id="other-title"><span data-lang="en">{{ site.data.ui.publications.other.en }}</span><span data-lang="zh">{{ site.data.ui.publications.other.zh }}</span></h2>
+  </div>
+  {% assign other_publications = site.data.publications | where: 'selected', false %}
+  {% assign publications_by_year = other_publications | group_by: 'year' %}
+  {% for year in publications_by_year %}
+    <div class="year-group">
+      <h3 class="year-heading">{{ year.name }}</h3>
+      <div class="publication-list">{% for publication in year.items %}{% include publication-card.html publication=publication %}{% endfor %}</div>
+    </div>
+  {% endfor %}
+</section>

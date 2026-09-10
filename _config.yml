@@ -1,0 +1,20 @@
+title: "Ke Xu | Academic Homepage"
+description: "Ke Xu's academic homepage — research, publications, teaching, and contact information."
+url: "https://xuke225.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

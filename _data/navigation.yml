@@ -1,0 +1,20 @@
+- key: home
+  url: /
+  label:
+    en: Home
+    zh: 首页
+- key: publications
+  url: /publications/
+  label:
+    en: Publications
+    zh: 研究成果
+- key: teaching
+  url: /teaching/
+  label:
+    en: Teaching
+    zh: 教学
+- key: contact
+  url: /contact/
+  label:
+    en: Contact
+    zh: 联系方式

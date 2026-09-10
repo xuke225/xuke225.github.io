@@ -1,0 +1,31 @@
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Ke Xu home">
+      <span class="wordmark-mark" aria-hidden="true">KX</span>
+      <span class="wordmark-name">
+        <span data-lang="en">{{ site.data.profile.name.en }}</span>
+        <span data-lang="zh">{{ site.data.profile.name.zh }}</span>
+      </span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+      <span data-lang="en">{{ site.data.ui.menu.en }}</span>
+      <span data-lang="zh">{{ site.data.ui.menu.zh }}</span>
+    </button>
+
+    <nav id="site-navigation" class="site-navigation" aria-label="Primary navigation">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}"{% if page.nav_key == item.key %} class="is-active" aria-current="page"{% endif %}>
+          <span data-lang="en">{{ item.label.en }}</span>
+          <span data-lang="zh">{{ item.label.zh }}</span>
+        </a>
+      {% endfor %}
+    </nav>
+
+    <button class="language-toggle" type="button" data-language-toggle aria-label="切换为中文" aria-pressed="false">
+      <span data-lang="en">{{ site.data.ui.language.en }}</span>
+      <span data-lang="zh">{{ site.data.ui.language.zh }}</span>
+    </button>
+  </div>
+</header>

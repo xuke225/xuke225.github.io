@@ -1,320 +1,86 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=800">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-    <script type="text/javascript" src="./res/shownews.js"></script>
-    <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
-    a { 
-    color: #1772d0;
-    text-decoration:none;
-    }
-    a:focus, a:hover {
-    color: #f09228;
-    text-decoration:none;
-    }
-    body,td,th,tr,p,a {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px
-    }
-    .hp-photo{ width:191px; height:191px; border-radius:191px; -webkit-border-radius:191px; -moz-border-radius:191px; }
-    strong {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    }
-    heading {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 24px;
-    }
-    papertitle {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 700
-    }
-    name {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 32px;
-    }
-    .one
-    {
-    width: 160px;
-    height: 160px;
-    position: relative;
-    }
-    .two
-    {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
-    }
-    .fade {
-     transition: opacity .2s ease-in-out;
-     -moz-transition: opacity .2s ease-in-out;
-     -webkit-transition: opacity .2s ease-in-out;
-    }
-    span.highlight {
-        background-color: #ffffd0;
-    }
+---
+nav_key: home
+title_en: Home
+title_zh: 首页
+description_en: "Ke Xu is an Associate Professor at Anhui University researching generative foundation model optimization, computer vision, neural network compression, and embedded AI systems."
+description_zh: "许柯，安徽大学人工智能学院副教授，研究方向包括生成式大模型优化、计算机视觉、神经网络模型压缩与嵌入式 AI 系统。"
+---
 
-    #hidden_news {
-        display: none;
-    }
+<section class="content-section about-section" aria-labelledby="about-title">
+  <div class="section-heading">
+    <p class="section-index">01</p>
+    <h1 id="about-title">
+      <span data-lang="en">{{ site.data.ui.home.about.en }}</span>
+      <span data-lang="zh">{{ site.data.ui.home.about.zh }}</span>
+    </h1>
+  </div>
+  <div class="prose-block">
+    <div data-lang="en">
+      {% for paragraph in site.data.profile.bio.en %}<p>{{ paragraph }}</p>{% endfor %}
+    </div>
+    <div data-lang="zh">
+      {% for paragraph in site.data.profile.bio.zh %}<p>{{ paragraph }}</p>{% endfor %}
+    </div>
+  </div>
+</section>
+<section class="content-section" aria-labelledby="research-title">
+  <div class="section-heading">
+    <p class="section-index">02</p>
+    <h2 id="research-title">
+      <span data-lang="en">{{ site.data.ui.home.research.en }}</span>
+      <span data-lang="zh">{{ site.data.ui.home.research.zh }}</span>
+    </h2>
+  </div>
+  <div class="research-grid">
+    <p class="research-intro">
+      <span data-lang="en">{{ site.data.profile.research_intro.en }}</span>
+      <span data-lang="zh">{{ site.data.profile.research_intro.zh }}</span>
+    </p>
+    <ol class="research-topics">
+      {% for topic in site.data.profile.research_topics %}
+        <li>
+          <span class="topic-number">0{{ forloop.index }}</span>
+          <span data-lang="en">{{ topic.en }}</span>
+          <span data-lang="zh">{{ topic.zh }}</span>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
 
-    #hide_news_botton {
-        cursor: pointer;
-    }
+<section class="content-section news-section" aria-labelledby="news-title">
+  <div class="section-heading section-heading--with-copy">
+    <div>
+      <p class="section-index">03</p>
+      <h2 id="news-title">
+        <span data-lang="en">{{ site.data.ui.home.news.en }}</span>
+        <span data-lang="zh">{{ site.data.ui.home.news.zh }}</span>
+      </h2>
+    </div>
+    <p>
+      <span data-lang="en">{{ site.data.ui.home.news_intro.en }}</span>
+      <span data-lang="zh">{{ site.data.ui.home.news_intro.zh }}</span>
+    </p>
+  </div>
 
-    #hidden_events {
-        display: none;
-    }
+  <div class="news-list" data-news-list>
+    {% for item in site.data.news %}
+      {% if forloop.index > 5 %}{% assign is_extra = true %}{% else %}{% assign is_extra = false %}{% endif %}
+      {% include news-item.html item=item index=forloop.index extra=is_extra %}
+    {% endfor %}
+  </div>
 
-    #hide_events_botton {
-        cursor: pointer;
-    }
-    </style>
-
-    <title>Ke Xu</title>
-    <!--<link rel="stylesheet" type="text/css" href="/imgs/css" >-->
-    <!-- <link rel="icon" type="image/jpg" href="http://image.yigouai.cn/20230822132810.png"> -->
-</head>
-
-<body>
-<table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td>
-    <!--SECTION 1 -->
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody><tr>
-              <td width="75%" valign="middle">
-                <p align="center"><name>Ke Xu 许柯</name></p>
-                <p align="justify">I am a Lecturer with the School of Artificial Intelligence, Anhui University, Hefei, China. I received my Ph.D. degree in the Institute of Information Science, Beijing Jiaotong University (BJTU), China, 2021.
-                    <br><br>
-                    <strong>Email:</strong> xuke@ahu.edu.cn
-                <br>
-                
-                </p><p align="center">
-                    <a href="https://scholar.google.com/citations?user=FEjf5HgAAAAJ">Google Scholar</a> / 
-                    <a href="https://github.com/xuke225"> Github </a> / 
-                </p>
-
-              </td>
-			  <td align="right"> <img class="hp-photo" src="./Imgs/photo.jpg" style="width: 175;">
-              </td></tr>
-            </tbody>
-          </table>
-
-    <!--SECTION 2 -->
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-       <tbody><tr>
-          <td>
-          <heading>Research</heading>
-            <p align="justify">
-               My research interests are computer vision, machine learning. Specifically, I am interested in using deep learning to solve the practical problems in the industry such as the limitation of insufficient resources and a trade-off between computation and accuracy. My research focus is mainly on:
-               <!-- <br><br> -->
-               <li><strong>Neural architecture design and search<strong>
-                <br><br>
-               <li><strong>Network quantization<strong>
-               <br><br>
-               <li><strong>Network pruning<strong>
-               <br><br>
-               <li><strong>Knowledge distillation<strong>
-               <br><br>
-               <li><strong>AI embedded system<strong>
-               <br><br>
-               <li><strong>FPGA accelerator design of DNN<strong>
-               <br><br>
-            </td></tr>
-       </tbody>
-    </table>
-
-    <!--SECTION 3 -->
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-       <tbody><tr>
-          <td><heading>Recent News</heading> 
-            <p> &#128681; <strong>[2023.12]</strong>  One paper is accepted by AAAI 2024.
-            <p> &#128681; <strong>[2023.07]</strong>  One paper is accepted by ICCV 2023.
-            <p> &#128681; <strong>[2022.04]</strong>  One paper is accepted by IJCAI 2022. 
-            <div id="hide_news_botton">
-                <p><a onclick="showNews()">[view more]</a> </p>
-            </div>
-            <div id="hidden_news">
-                <!-- <p> <strong>[2022.01.21]</strong> One first-authored <a href="https://openreview.net/forum?id=5xEgrl_5FAJ">paper</a> for BERT binarization is accepted by <a href="https://iclr.cc/">ICLR 2022</a>. 
-                <p> <strong>[2021.10.13]</strong> I join Bytedance AI Lab as an research intern.</p>
-                <p> <strong>[2021.09.27]</strong> Our <a href="https://arxiv.org/abs/2010.05501">BiPointNet</a> (ICLR'21) obtain the Most Popular Paper in Beijing Area.</p>
-                <p> <strong>[2021.09.20]</strong> I obtain China National Scholarship (the 2nd time).</p>
-                <p> <strong>[2021.07.23]</strong> One co-authored <a href=" ">paper</a> for object detection is accepted by <a href="http://iccv2021.thecvf.com/">ICCV 2021</a>.
-                <p> <strong>[2021.05.17]</strong> I obtain Beihang-Huawei Scholarship.</p>
-                <p> <strong>[2021.03.01]</strong> One co-authored <a href="https://arxiv.org/pdf/2013.01049.pdf">oral paper</a> for data-free quantization is accepted by <a href="http://cvpr2021.thecvf.com/">CVPR 2021</a>.    
-                <p> <strong>[2021.01.13]</strong> One first-authored <a href="https://openreview.net/pdf?id=9QLRCVysdlO">paper</a> for PointNet binarization is accepted by <a href="https://iclr.cc/">ICLR 2021</a>. </p>
-                <p> <strong>[2020.09.20]</strong> I obtain China National Scholarship.</p>
-                <p> <strong>[2020.09.18]</strong> I release our open source project <a href="https://github.com/htqin/awesome-model-quantization">"Awesome Model Quantization"</a>.</p>
-                <p> <strong>[2020.06.23]</strong> I join Tencent WXG as an research intern.</p>
-                <p> <strong>[2020.04.14]</strong> I am invited to present our <a href="https://arxiv.org/abs/1909.10788">IR-Net</a> and <a href="https://arxiv.org/abs/2004.03333">survey paper</a> at JD.com, Inc. Here are the <a href="https://htqin.github.io/Slides/talk-JD-20200414.pptx">Slides</a>. </p>
-                <p> <strong>[2020.02.28]</strong> One first-authored <a href="https://arxiv.org/abs/1909.10788">paper</a> for model binarization is accepted by <a href="http://cvpr2020.thecvf.com/">CVPR 2020</a>. </p>
-                <p> <strong>[2020.02.27]</strong> One co-authored paper for video hashing is accepted by <a href="https://ieee-cas.org/publications/transactions-multimedia">TMM</a>. </p>
-                <p> <strong>[2020.02.20]</strong> One first-authored <a href="https://www.sciencedirect.com/science/article/pii/S0031320320300856">survey paper</a> for binary neural networks is accepted by <a href="https://www.journals.elsevier.com/pattern-recognition">PR</a>. </p>
-                <p> <strong>[2018.11.07]</strong> I join MSRA as an research intern.</p> -->
-            </div>
-         </td>
-       </tr></tbody>
-    </table>
-
-    <!--SECTION 4 -->
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tbody>
-          <td>
-          <heading>Selected Publications<a name="publications"></a>
-        </heading>
-        <p>
-        You can find the full list on <a href="https://scholar.google.com/citations?user=FEjf5HgAAAAJ">Google Scholar</a>.
-        </p>
-        </td></tbody>
-    </table>
-    
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        
-		<tbody>
-
-        <tr><td width="20%"><img src="./Imgs/PTMQ.jpg" alt="PontTuset" width="180" style="border-style: none"></td>
-            <td width="80%" valign="top">
-                <p><a href="https://ojs.aaai.org/index.php/AAAI/article/view/29553">
-                <papertitle>PTMQ: Post-Training Multi-Bit Quantization of Neural Networks</papertitle></a>
-                [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/29553">PDF</a>]
-                <br><strong>Ke Xu</strong>, Zhongcheng Li, Shanshan Wang, Xingyi Zhang
-                <br>
-                <em>Thirty-Eighth AAAI Conference on Artificial Intelligence (AAAI)</em>, 2024
-                <br>
-                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/29553">Paper</a> /
-                <a href="https://github.com/xuke225/PTMQ">Code</a> 
-                </p><p></p>
-                <!-- <p align="justify" style="font-size:13px">In this paper, we explore a one-shot network quantization regime, named Elastic Quantization Neural Networks (EQ-Net), which aims to train a robust weight-sharing quantization supernet.</p>
-                <p></p> -->
-            </td>
-        </tr>
-
-        <tr><td width="20%"><img src="./Imgs/EQNet.png" alt="PontTuset" width="180" style="border-style: none"></td>
-            <td width="80%" valign="top">
-	            <p><a href="https://arxiv.org/abs/2308.07650">
-                <papertitle>EQ-Net: Elastic Quantization Neural Networks</papertitle></a>
-                [<a href="https://arxiv.org/abs/2308.07650">PDF</a>]
-                <br><strong>Ke Xu</strong>, Lei Han, Ye Tian, Shangshang Yang, Xingyi Zhang
-                <br>
-                <em>International Conference on Computer Vision (ICCV)</em>, 2023
-                <br>
-                <a href="https://arxiv.org/abs/2308.07650">Paper</a> /
-                <a href="https://xuke225.github.io/Projects/EQNet.html">Project</a> / 
-                <a href="https://github.com/xuke225/EQ-Net">Code</a> 
-                </p><p></p>
-                <!-- <p align="justify" style="font-size:13px">In this paper, we explore a one-shot network quantization regime, named Elastic Quantization Neural Networks (EQ-Net), which aims to train a robust weight-sharing quantization supernet.</p>
-                <p></p> -->
-            </td>
-        </tr>
-
-        <tr><td width="20%"><img src="./Imgs/MultiQuant.png" alt="PontTuset" width="180" style="border-style: none"></td>
-            <td width="80%" valign="top">
-	            <p><a href="https://www.ijcai.org/proceedings/2022/504">
-                <papertitle>MultiQuant: Training Once for Multi-bit Quantization of Neural Networks</papertitle></a>
-                [<a href="https://www.ijcai.org/proceedings/2022/504">PDF</a>]
-                <br><strong>Ke Xu</strong>, Qiantai Feng, Xingyi Zhang, Dong Wang.
-                <br>
-                <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2022
-                <br>
-                <a href="https://www.ijcai.org/proceedings/2022/504">Paper</a>
-                <!-- <p align="justify" style="font-size:13px">In this paper, proposes a multi-bit quantization framework (MultiQuant) to make the learned DNNs robust for different precision configuration during inference by adopting Lowest-Random-Highest bit-width cotraining method. </p>
-                <p></p> -->
-            </td>
-        </tr>
-
-        <tr><td width="20%"><img src="./Imgs/DSP-Efficient.png" alt="PontTuset" width="180" style="border-style: none"></td>
-            <td width="80%" valign="top">
-	            <p><a href="https://ieeexplore.ieee.org/document/8963678/">
-                <papertitle>DSP-Efficient Hardware Acceleration of Convolutional Neural Network Inference on FPGAs</papertitle></a>
-                [<a href="https://ieeexplore.ieee.org/document/8963678/">PDF</a>]
-                <br>Dong Wang, <strong>Ke Xu</strong>, Jingning Guo, Soheil Ghiasi
-                <br>
-                <em>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems(TCAD)</em>, 2020
-                <br>
-                <a href="https://ieeexplore.ieee.org/document/8963678/">Paper</a> 
-                <!-- <p align="justify" style="font-size:13px">This work presented the first high-throughput FPGA accelerator design which targeted efficient implementation of sparse convolutional neural network. </p>
-                <p></p> -->
-            </td>
-        </tr>
-
-        <tr><td width="20%"><img src="./Imgs/ABM-Sparse.png" alt="PontTuset" width="180" style="border-style: none"></td>
-            <td width="80%" valign="top">
-	            <p><a href="https://ieeexplore.ieee.org/document/8806824">
-                <papertitle>ABM-SpConv: A Novel Approach to FPGA-based Acceleration of Convolutional Neural Network Inference</papertitle></a>
-                [<a href="https://ieeexplore.ieee.org/document/8806824">PDF</a>]
-                <br>Dong Wang, <strong>Ke Xu</strong>, Qun Jia, Soheil Ghiasi
-                <br>
-                <em>Design Automation Conference (DAC)</em>, 2019
-                <br>
-                <a href="https://ieeexplore.ieee.org/document/8806824">Paper</a>
-                </p><p></p>
-                <p align="justify" style="font-size:13px">This work presented the first high-throughput FPGA accelerator design which targeted efficient implementation of sparse convolutional neural network. </p>
-                <p></p>
-            </td>
-        </tr>
-
-        <tr><td width="20%"><img src="./Imgs/PipeCNN_YOLOv2.png" alt="PontTuset" width="180" style="border-style: none"></td>
-            <td width="80%" valign="top">
-	            <p><a href="https://ieeexplore.ieee.org/abstract/document/8735517/">
-                <papertitle>A Scalable OpenCL-Based FPGA Accelerator for YOLOv2  </papertitle></a>
-                [<a href="https://ieeexplore.ieee.org/abstract/document/8735517/">PDF</a>]
-                <br><strong>Ke Xu</strong>,Xiaoyun Wang, Dong Wang*
-                <br>
-                <em>Field-Programmable Custom Computing Machines (FCCM)</em>, 2019
-                <br>
-                <a href="https://ieeexplore.ieee.org/abstract/document/8735517/">Paper</a> /
-                <a href="https://link.springer.com/article/10.1007/s11554-020-00977-w">Journal</a> /
-                <a href="https://github.com/doonny/PipeCNN">Code</a>  
-                <!-- <font color="red"> News:</font>
-                <a href="https://mp.weixin.qq.com/s/0qIBM4wJTc12WzghV1V_gQ"><font color="red">(量子位, </font></a>
-                <a href="https://mp.weixin.qq.com/s/WftpvEWa_BAyljyyRSIEVQ"><font color="red">商汤学术) </font></a>
-                <br>
-                <p align="justify" style="font-size:13px">We proposed Diverse Sample Generation (DSG) scheme to mitigate the adverse effects caused by homogenization in data-free quantization, 
-                    which obtained significant improvements over various networks and quantization methods.</p>
-                <p></p> -->
-            </td>
-        </tr>
-
-        <tr><td width="20%"><img src="./Imgs/PipeCNN.png" alt="PontTuset" width="180" style="border-style: none"></td>
-            <td width="80%" valign="top">
-	            <p><a href="https://ieeexplore.ieee.org/document/8280160/">
-                <papertitle>PipeCNN: An OpenCL-Based Open-Source FPGA Accelerator for Convolution Neural Networks</papertitle></a>
-                [<a href="https://ieeexplore.ieee.org/document/8280160/">PDF</a>]
-                <br>Dong Wang, <strong>Ke Xu</strong>*, Diankun Jiang
-                <br>
-                <em>International Conference on Field Programmable Technology (ICFPT)</em>, 2017
-                <br>
-                <a href="https://arxiv.org/abs/1611.02450">Paper</a> /
-                <a href="https://github.com/doonny/PipeCNN">Code</a>  
-                <!-- <font color="red"> News:</font>
-                <a href="https://mp.weixin.qq.com/s/0qIBM4wJTc12WzghV1V_gQ"><font color="red">(量子位, </font></a>
-                <a href="https://mp.weixin.qq.com/s/WftpvEWa_BAyljyyRSIEVQ"><font color="red">商汤学术) </font></a>
-                <br>
-                <p align="justify" style="font-size:13px">We proposed Diverse Sample Generation (DSG) scheme to mitigate the adverse effects caused by homogenization in data-free quantization, 
-                    which obtained significant improvements over various networks and quantization methods.</p>
-                <p></p> -->
-            </td>
-        </tr>
-
-        </tbody>
-    </table>
-
-    <!-- SECTION 10
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tbody><tr>
-    <td width="100%" align="middle">
-    <p align="center" style="width: 25% ">
-        <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=O7AjyGXmrOPjngfk_VI9NhWFu7JWskLJlRerwKQdjh4"></script>
-    </p></td>
-    </tr>
-    </tbody>
-    </table> -->
+  {% if site.data.news.size > 5 %}
+    <button class="text-button news-more" type="button" data-news-more aria-expanded="false">
+      <span data-more-label>
+        <span data-lang="en">{{ site.data.ui.home.expand_all.en }}</span>
+        <span data-lang="zh">{{ site.data.ui.home.expand_all.zh }}</span>
+      </span>
+      <span data-less-label hidden>
+        <span data-lang="en">{{ site.data.ui.home.collapse_all.en }}</span>
+        <span data-lang="zh">{{ site.data.ui.home.collapse_all.zh }}</span>
+      </span>
+      <span aria-hidden="true">↓</span>
+    </button>
+  {% endif %}
+</section>

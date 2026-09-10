@@ -1,0 +1,52 @@
+{% assign publication = include.publication %}
+{% capture publication_actions %}
+  {% if publication.links %}
+    <div class="publication-actions" aria-label="Publication resources">
+      {% for link in publication.links %}
+        {% assign link_key = link[0] %}
+        {% assign link_url = link[1] %}
+        {% assign link_label = site.data.ui.publications.links[link_key] %}
+        <a href="{{ link_url }}"{% unless link_url contains site.url %}{% if link_url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}{% endunless %}>
+          <span data-lang="en">{{ link_label.en }}</span>
+          <span data-lang="zh">{{ link_label.zh }}</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endcapture %}
+<article class="publication-card{% unless publication.image %} publication-card--text{% endunless %}" id="{{ publication.id }}">
+  {% if publication.image %}
+    <div class="publication-media">
+      <img src="{{ publication.image | relative_url }}" alt="Visual overview for {{ publication.title }}" loading="lazy">
+    </div>
+  {% endif %}
+
+  <div class="publication-body">
+    {% unless publication.selected %}
+      <div class="publication-topline">
+        <span class="publication-year">{{ publication.year }}</span>
+      </div>
+    {% endunless %}
+    <h3>{{ publication.title }}</h3>
+    <p class="publication-authors">
+      {% for author in publication.authors %}{% assign highlight_self_role = false %}{% if author.self %}{% if forloop.first or author.corresponding %}{% assign highlight_self_role = true %}{% endif %}{% endif %}<span{% if highlight_self_role %} class="is-highlighted-author"{% endif %}>{{ author.name }}</span>{% if author.self and author.corresponding %}<sup class="author-role" aria-label="Corresponding author / 通讯作者">†</sup>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+    </p>
+    <div class="publication-meta-row">
+      <p class="publication-venue"><em>{{ publication.venue.name }}</em> (<strong>{{ publication.venue.abbr }}</strong>)</p>
+      {% unless publication.selected %}{{ publication_actions }}{% endunless %}
+    </div>
+    {% if publication.selected %}
+      <div class="publication-footer-row">
+        <div class="publication-footer-markers">
+          <span class="publication-year">{{ publication.year }}</span>
+          <span class="publication-badge">
+            <span data-lang="en">{{ site.data.ui.publications.selected_badge.en }}</span>
+            <span data-lang="zh">{{ site.data.ui.publications.selected_badge.zh }}</span>
+          </span>
+        </div>
+        {{ publication_actions }}
+      </div>
+    {% endif %}
+  </div>
+</article>
