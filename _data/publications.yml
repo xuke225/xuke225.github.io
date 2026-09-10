@@ -1,3 +1,58 @@
+- id: fedmgl
+  year: 2026
+  selected: false
+  title: "FedMGL: Boosting One-Shot Federated Learning via Mixture of Grouped LoRA Experts"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Yixin Wang" }
+    - { name: "Yeming Zhang" }
+    - { name: "Bo Xiao" }
+    - { name: "Cuiqun Chen" }
+    - { name: "Xingyi Zhang" }
+  venue: { name: "IEEE Transactions on Circuits and Systems for Video Technology", abbr: "TCSVT" }
+  links:
+    paper: https://ieeexplore.ieee.org/abstract/document/11614012/
+
+- id: gaze
+  year: 2026
+  selected: false
+  title: "GAZE: Grounding-Aware Zone-Adaptive Visual Token Selection with Focal-Spatial Synergy for Efficient MLLMs"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Beibei Han" }
+    - { name: "Jingyuan Zhang" }
+    - { name: "Xiaoyun Wang" }
+    - { name: "Shanshan Wang" }
+    - { name: "Xingyi Zhang" }
+  venue: { name: "ACM International Conference on Multimedia", abbr: "ACM MM" }
+
+- id: pequant
+  year: 2026
+  selected: false
+  title: "PEQuant: Prompt-Driven Activation Reconstruction for Elastic Quantization of Vision Transformers"
+  authors:
+    - { name: "Ke Xu", self: true }
+    - { name: "Tianyu Ma" }
+    - { name: "Xiaozheng Shen" }
+    - { name: "Zining Wang" }
+    - { name: "Xiaoyun Wang" }
+    - { name: "Jinyang Guo" }
+  venue: { name: "ACM International Conference on Multimedia", abbr: "ACM MM" }
+
+- id: style-aware-tta
+  year: 2026
+  selected: false
+  title: "Style-Aware Contrastive Test-Time Adaptation: A Dual-Cache Model for Robust Vision-Language Alignment"
+  authors:
+    - { name: "Shanshan Wang" }
+    - { name: "Xun Yang" }
+    - { name: "Pichao Wang" }
+    - { name: "Ke Xu", self: true }
+    - { name: "Xingyi Zhang" }
+  venue: { name: "IEEE Transactions on Image Processing", abbr: "TIP" }
+  links:
+    paper: https://ieeexplore.ieee.org/abstract/document/11589538/
+
 - id: epts
   year: 2026
   selected: false
@@ -15,8 +70,9 @@
 
 - id: cogeo-ad
   year: 2026
-  selected: false
+  selected: true
   title: "CoGeoAD: Hierarchical Color-Geometric Fusion with Multi-View Attention for Zero-Shot 3D Anomaly Detection"
+  image: /Imgs/CoGeoAD.png
   authors:
     - { name: "Ke Xu", self: true }
     - { name: "Xinle Wang" }
@@ -31,8 +87,9 @@
 
 - id: visual-ad
   year: 2026
-  selected: false
+  selected: true
   title: "VisualAD: Language-Free Zero-Shot Anomaly Detection via Vision Transformer"
+  image: /Imgs/VisualAD.png
   authors:
     - { name: "Yanning Hou" }
     - { name: "Peiyuan Li" }
@@ -48,8 +105,9 @@
 
 - id: quept
   year: 2026
-  selected: false
+  selected: true
   title: "QuEPT: Quantized Elastic Precision Transformers with One-Shot Calibration for Multi-Bit Switching"
+  image: /Imgs/QuEPT.png
   authors:
     - { name: "Ke Xu", self: true }
     - { name: "Yixin Wang" }
@@ -76,6 +134,35 @@
   links:
     paper: https://doi.org/10.1609/AAAI.V40I13.38110
 
+- id: feature-responsive-lora
+  year: 2025
+  selected: false
+  title: "Feature Responsive LoRA: Towards Parameter-Efficient Transfer Learning for Self-Supervised Visual Models"
+  authors:
+    - { name: "Shanshan Wang" }
+    - { name: "Xiaozheng Shen" }
+    - { name: "Xun Yang" }
+    - { name: "Ke Xu", self: true, corresponding: true }
+    - { name: "Xingyi Zhang" }
+  venue: { name: "IEEE Transactions on Circuits and Systems for Video Technology", abbr: "TCSVT" }
+  links:
+    paper: https://ieeexplore.ieee.org/abstract/document/11113274/
+
+- id: hybrid-architecture-enas
+  year: 2024
+  selected: false
+  title: "Hybrid Architecture-Based Evolutionary Robust Neural Architecture Search"
+  authors:
+    - { name: "Shangshang Yang" }
+    - { name: "Xiangkun Sun" }
+    - { name: "Ke Xu", self: true }
+    - { name: "Yuanchao Liu" }
+    - { name: "Ye Tian" }
+    - { name: "Xingyi Zhang" }
+  venue: { name: "IEEE Transactions on Emerging Topics in Computational Intelligence", abbr: "TETCI" }
+  links:
+    paper: https://ieeexplore.ieee.org/abstract/document/10541069/
+
 - id: autompq
   year: 2024
   selected: false
@@ -92,9 +179,8 @@
 
 - id: ptmq
   year: 2024
-  selected: true
+  selected: false
   title: "PTMQ: Post-Training Multi-Bit Quantization of Neural Networks"
-  image: /Imgs/PTMQ.jpg
   authors:
     - { name: "Ke Xu", self: true }
     - { name: "Zhongcheng Li" }
@@ -123,26 +209,10 @@
     project: /Projects/EQNet.html
     code: https://github.com/xuke225/EQ-Net
 
-- id: ta-bidet
-  year: 2022
-  selected: false
-  title: "TA-BiDet: Task-Aligned Binary Object Detector"
-  authors:
-    - { name: "Han Pu" }
-    - { name: "Ke Xu", self: true }
-    - { name: "Dezheng Zhang" }
-    - { name: "Li Liu" }
-    - { name: "Lingzhi Liu" }
-    - { name: "Dong Wang" }
-  venue: { name: "Neurocomputing", abbr: "Neurocomputing" }
-  links:
-    paper: https://doi.org/10.1016/j.neucom.2022.09.038
-
 - id: multiquant
   year: 2022
-  selected: true
+  selected: false
   title: "MultiQuant: Training Once for Multi-Bit Quantization of Neural Networks"
-  image: /Imgs/MultiQuant.png
   authors:
     - { name: "Ke Xu", self: true }
     - { name: "Qiantai Feng" }
@@ -152,21 +222,6 @@
   links:
     paper: https://www.ijcai.org/proceedings/2022/504
     pdf: https://www.ijcai.org/proceedings/2022/0504.pdf
-
-- id: genexp
-  year: 2021
-  selected: false
-  title: "GenExp: Multi-Objective Pruning for Deep Neural Network Based on Genetic Algorithm"
-  authors:
-    - { name: "Ke Xu", self: true }
-    - { name: "Dezheng Zhang" }
-    - { name: "Jianjing An" }
-    - { name: "Li Liu" }
-    - { name: "Lingzhi Liu" }
-    - { name: "Dong Wang" }
-  venue: { name: "Neurocomputing", abbr: "Neurocomputing" }
-  links:
-    paper: https://doi.org/10.1016/j.neucom.2021.04.022
 
 - id: dedicated-yolov2
   year: 2021
@@ -198,21 +253,6 @@
   links:
     paper: https://ieeexplore.ieee.org/document/8963678/
 
-- id: sparse-yolo
-  year: 2020
-  selected: false
-  title: "Sparse-YOLO: Hardware/Software Co-Design of an FPGA Accelerator for YOLOv2"
-  authors:
-    - { name: "Zixiao Wang" }
-    - { name: "Ke Xu", self: true }
-    - { name: "Shuaixiao Wu" }
-    - { name: "Li Liu" }
-    - { name: "Lingzhi Liu" }
-    - { name: "Dong Wang" }
-  venue: { name: "IEEE Access", abbr: "IEEE Access" }
-  links:
-    paper: https://doi.org/10.1109/ACCESS.2020.3004198
-
 - id: abm-spconv
   year: 2019
   selected: true
@@ -229,9 +269,8 @@
 
 - id: scalable-yolov2
   year: 2019
-  selected: true
+  selected: false
   title: "A Scalable OpenCL-Based FPGA Accelerator for YOLOv2"
-  image: /Imgs/PipeCNN_YOLOv2.png
   authors:
     - { name: "Ke Xu", self: true }
     - { name: "Xiaoyun Wang" }

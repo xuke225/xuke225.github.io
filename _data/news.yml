@@ -1,3 +1,12 @@
+- date: 2026-07-10
+  featured: true
+  title:
+    en: Two papers were accepted by ACM MM 2026.
+    zh: 两篇论文被 ACM MM 2026 接收。
+  detail:
+    en: "GAZE and PEQuant were accepted by the ACM International Conference on Multimedia 2026."
+    zh: "GAZE 与 PEQuant 两项工作被 ACM Multimedia 2026 接收。"
+
 - date: 2026-06-24
   featured: true
   title:
